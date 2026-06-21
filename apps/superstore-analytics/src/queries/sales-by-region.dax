@@ -1,0 +1,9 @@
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZECOLUMNS(
+        DimCustomer[region],
+        "Sales", [Total Sales]
+    )
+    /*__FILTERS__*/
+)
+ORDER BY [Sales] DESC

@@ -1,0 +1,10 @@
+# Connection to your Power BI / Microsoft Fabric semantic model.
+# Replace the placeholders with YOUR workspace id and semantic model (dataset) id,
+# then run:  npx fabric-app-data generate -o src/fabric.generated.ts
+activeProfile: default
+profiles:
+  default:
+    semanticModels:
+      superstore:
+        workspaceId: <YOUR_WORKSPACE_ID>
+        itemId: <YOUR_SEMANTIC_MODEL_ID>

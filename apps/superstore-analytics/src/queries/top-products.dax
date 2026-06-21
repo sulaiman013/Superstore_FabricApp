@@ -1,0 +1,13 @@
+EVALUATE
+TOPN(
+    10,
+    CALCULATETABLE(
+        SUMMARIZECOLUMNS(
+            DimProduct[product_name],
+            "Sales", [Total Sales]
+        )
+        /*__FILTERS__*/
+    ),
+    [Sales], DESC
+)
+ORDER BY [Sales] DESC

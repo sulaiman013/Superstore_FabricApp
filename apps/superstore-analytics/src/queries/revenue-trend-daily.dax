@@ -1,0 +1,12 @@
+EVALUATE
+CALCULATETABLE(
+    FILTER(
+        SUMMARIZECOLUMNS(
+            DimDate[date],
+            "Sales", [Total Sales]
+        ),
+        [Sales] > 0
+    )
+    /*__FILTERS__*/
+)
+ORDER BY DimDate[date]

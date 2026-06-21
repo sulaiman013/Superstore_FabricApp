@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "data": {},
+  "mark": { "type": "line", "strokeWidth": 2.5 },
+  "encoding": {
+    "x": { "field": "MonthStart", "type": "temporal", "title": null },
+    "y": {
+      "field": "Sales",
+      "type": "quantitative",
+      "title": null,
+      "scale": { "zero": false }
+    },
+    "tooltip": [
+      { "field": "MonthStart", "type": "temporal" },
+      { "field": "Sales", "type": "quantitative" }
+    ]
+  }
+}

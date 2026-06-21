@@ -1,0 +1,14 @@
+EVALUATE
+CALCULATETABLE(
+    FILTER(
+        SUMMARIZECOLUMNS(
+            DimDate[year],
+            DimDate[month],
+            "MonthStart", DATE(MAX(DimDate[year]), MAX(DimDate[month]), 1),
+            "Sales", [Total Sales]
+        ),
+        [Sales] > 0
+    )
+    /*__FILTERS__*/
+)
+ORDER BY DimDate[year], DimDate[month]

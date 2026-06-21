@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "data": {},
+  "mark": { "type": "arc", "innerRadius": 58, "cornerRadius": 2 },
+  "encoding": {
+    "theta": { "field": "Sales", "type": "quantitative", "stack": true },
+    "color": {
+      "field": "FactSalespayment_method",
+      "type": "nominal",
+      "title": null,
+      "scale": { "range": ["#0f6cbd", "#13a10e", "#ca5010"] }
+    },
+    "tooltip": [
+      { "field": "FactSalespayment_method", "type": "nominal" },
+      { "field": "Sales", "type": "quantitative" }
+    ]
+  }
+}

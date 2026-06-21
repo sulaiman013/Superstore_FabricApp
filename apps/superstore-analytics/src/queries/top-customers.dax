@@ -1,0 +1,16 @@
+EVALUATE
+TOPN(
+    15,
+    CALCULATETABLE(
+        SUMMARIZECOLUMNS(
+            DimCustomer[customer_name],
+            DimCustomer[customer_segment],
+            DimCustomer[region],
+            "Revenue", [Total Sales],
+            "Orders", [Transactions]
+        )
+        /*__FILTERS__*/
+    ),
+    [Revenue], DESC
+)
+ORDER BY [Revenue] DESC

@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Warm, indigo-tinted neutrals (never pure black/white) */
+  --color-surface: oklch(0.985 0.004 95);
+  --color-panel: oklch(0.997 0.002 95);
+  --color-rail: oklch(0.965 0.005 285);
+  --color-ink: oklch(0.24 0.02 285);
+  --color-muted: oklch(0.52 0.02 285);
+  --color-faint: oklch(0.66 0.015 285);
+  --color-line: oklch(0.915 0.006 285);
+
+  /* Committed accent: indigo (primary actions + selection only) */
+  --color-accent: oklch(0.54 0.16 277);
+  --color-accent-strong: oklch(0.47 0.17 277);
+  --color-accent-soft: oklch(0.95 0.03 277);
+
+  /* Semantic only */
+  --color-savings: oklch(0.56 0.13 158);
+  --color-savings-soft: oklch(0.95 0.04 160);
+  --color-success: oklch(0.6 0.14 152);
+  --color-success-soft: oklch(0.95 0.045 158);
+  --color-danger: oklch(0.57 0.19 25);
+  --color-danger-soft: oklch(0.95 0.03 25);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-line);
+  }
+}

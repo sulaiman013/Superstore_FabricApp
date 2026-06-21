@@ -1,0 +1,25 @@
+# dependencies / build
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+
+# secrets and deployment state (NEVER commit)
+.env
+.env.local
+.env.*.local
+**/rayfin/.env
+**/rayfin/.deployments.json
+**/rayfin/.lockfile.json
+**/rayfin/.temp/
+**/src/fabric.generated.ts
+
+# local agent / editor / test config
+.agents/
+.mcp.json
+.playwright/
+.playwright-config.json
+
+# os
+.DS_Store
+Thumbs.db

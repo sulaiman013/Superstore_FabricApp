@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "data": {},
+  "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+  "encoding": {
+    "x": { "field": "DimCustomerregion", "type": "nominal", "sort": "-y", "title": null },
+    "y": { "field": "Sales", "type": "quantitative", "title": null },
+    "color": {
+      "field": "DimCustomerregion",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "range": ["#0f6cbd", "#13a10e", "#ca5010", "#8764b8", "#038387", "#c19c00"]
+      }
+    },
+    "tooltip": [
+      { "field": "DimCustomerregion", "type": "nominal" },
+      { "field": "Sales", "type": "quantitative" }
+    ]
+  }
+}

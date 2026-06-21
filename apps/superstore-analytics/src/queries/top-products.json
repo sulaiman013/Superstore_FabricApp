@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "data": {},
+  "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+  "encoding": {
+    "y": { "field": "DimProductproduct_name", "type": "nominal", "sort": "-x", "title": null },
+    "x": { "field": "Sales", "type": "quantitative", "title": null },
+    "tooltip": [
+      { "field": "DimProductproduct_name", "type": "nominal" },
+      { "field": "Sales", "type": "quantitative" }
+    ]
+  }
+}

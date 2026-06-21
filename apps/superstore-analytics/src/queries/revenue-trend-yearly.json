@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "data": {},
+  "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+  "encoding": {
+    "x": { "field": "DimDateyear", "type": "ordinal", "title": null, "axis": { "labelAngle": 0 } },
+    "y": { "field": "Sales", "type": "quantitative", "title": null },
+    "tooltip": [
+      { "field": "DimDateyear", "type": "ordinal" },
+      { "field": "Sales", "type": "quantitative" }
+    ]
+  }
+}

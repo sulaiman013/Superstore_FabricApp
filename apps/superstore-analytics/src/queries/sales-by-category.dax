@@ -1,0 +1,10 @@
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZECOLUMNS(
+        DimProduct[category],
+        "Sales", [Total Sales],
+        "Profit", [Total Profit]
+    )
+    /*__FILTERS__*/
+)
+ORDER BY [Sales] DESC

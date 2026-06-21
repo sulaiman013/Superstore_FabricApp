@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "data": {},
+  "transform": [{ "filter": "datum.DimDatedate != null" }],
+  "mark": { "type": "line", "strokeWidth": 1.5 },
+  "encoding": {
+    "x": { "field": "DimDatedate", "type": "temporal", "title": null, "scale": { "nice": false } },
+    "y": { "field": "Sales", "type": "quantitative", "title": null },
+    "tooltip": [
+      { "field": "DimDatedate", "type": "temporal" },
+      { "field": "Sales", "type": "quantitative" }
+    ]
+  }
+}

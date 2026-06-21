@@ -1,0 +1,11 @@
+EVALUATE
+CALCULATETABLE(
+    ROW(
+        "Total Sales", [Total Sales],
+        "Total Profit", [Total Profit],
+        "Transactions", [Transactions],
+        "Avg Basket", [Avg Basket],
+        "Margin", [Margin %]
+    )
+    /*__FILTERS__*/
+)

@@ -1,0 +1,21 @@
+EVALUATE
+TOPN(
+    500,
+    CALCULATETABLE(
+        SUMMARIZECOLUMNS(
+            FactSales[order_id],
+            DimDate[date],
+            DimProduct[product_name],
+            DimProduct[category],
+            FactSales[store],
+            FactSales[payment_method],
+            "Qty", SUM(FactSales[quantity]),
+            "LineTotal", [Total Sales]
+        )
+        /*__DRILL__*/
+        /*__FILTERS__*/
+    ),
+    DimDate[date], DESC,
+    DimProduct[product_name], ASC
+)
+ORDER BY DimDate[date] DESC, DimProduct[product_name] ASC

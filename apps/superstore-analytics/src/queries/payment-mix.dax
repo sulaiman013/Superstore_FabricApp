@@ -1,0 +1,9 @@
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZECOLUMNS(
+        FactSales[payment_method],
+        "Sales", [Total Sales]
+    )
+    /*__FILTERS__*/
+)
+ORDER BY [Sales] DESC
